@@ -3,7 +3,6 @@ $(document).ready(function () {
     var map
 
     $("#btn").on("click", function () {
-      console.log("button WORKS");
         $('#bar-div').empty()
         $('#map').remove()
         $('.mapPlace').append('<div id="map" style="width: 300px; height: 300px;"></div>')
@@ -12,7 +11,6 @@ $(document).ready(function () {
     });
 
     function getBarInfo(z) {
-        console.log('about to smack api with this city', z)
         barArr = [];
         var city = z;
         var queryURL = "https://api.openbrewerydb.org/breweries?by_city=" + city;
@@ -21,32 +19,36 @@ $(document).ready(function () {
             for (var i = 0; i < response.length; i++) {
                 if (response[i].longitude != null && response[i].latitude != null) {
                     var barName = response[i].name;
+                    var barURL = response[i].website_url;
                     var barLong = response[i].longitude;
                     var barLat = response[i].latitude;
-                    barArr.push({barName, barLong, barLat});
+                    barArr.push({barName, barLong, barLat, barURL});
                 }
 
             }
-            console.log('barArray inside .then onf ajax', barArr);
             displayMap();
             displayBars();
         })
     }
 
     function displayBars() {
-        console.log('theres are barrArr in the display bars function', barArr)
         for (var i = 0; i < barArr.length; i++) {
             var grabBarName = barArr[i].barName;
-            newDiv = $("<h4>").text(grabBarName);
-            $("#bar-div").append(newDiv);
+            // newDiv = $("<h4>").text(grabBarName);
+            // $("#bar-div").append(newDiv);
+            newLink = $("<a>").text(grabBarName);
+            newLink.attr("href", barArr[i].barURL);
+            newLink.attr("alt", grabBarName);
+
+            var newBreak = $("<br>");
+            
+            $("#bar-div").append(newLink);
+            $("#bar-div").append(newBreak);
         }
     }
 
     function displayMap() {
-        console.log('inside display map!!', L)
         L.mapquest.key = 'lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24';
-
-        console.log('barrArr[0] we use this for map', barArr[0])
 
         map = L.mapquest.map('map', {
             center: [
@@ -57,8 +59,6 @@ $(document).ready(function () {
             zoom: 8
         });
 
-        console.log('this is the map variable', map)
-        console.log('barr arr in display map function', barArr)
         for (var i = 0; i < barArr.length; i++) {
             if (barArr[i].barLat != null && barArr[i].barLong != null) {
                 L.marker([
