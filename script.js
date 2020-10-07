@@ -6,7 +6,7 @@ $(document).ready(function () {
       console.log("button WORKS");
         $('#bar-div').empty()
         $('#map').remove()
-        $('.mapPlace').append('<div id="map" style="width: 300px; height: 300px;"></div>')
+        $('.mapPlace').append('<div id="map" style="width: 600px; height: 600px;"></div>')
         var userInput = $("#userInput").val().trim();
         getBarInfo(userInput);
     });
