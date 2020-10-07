@@ -1,6 +1,7 @@
  .navbar {
      margin-bottom: 30px;
      background-color: gray;
+     /* need to fix buttons. remove buttons. add our own logo title */
  }
 
  .footer-bottom {
@@ -8,11 +9,39 @@
     color: white;
     bottom: 0;
     padding: 10px;
+    /* need to add our own stuff to footer */
 }
 
-.card {
-    display: inline-block;
-    margin: 30px;
-    min-width: 45%;
-    min-height: 50%;
+.card{
+    height: 470px;
+    width: 470px;
+    border-style: solid;
+    border-color: hsl(0, 0%, 4%);
+    border-width: 3px;
+    /* play around with color? */
+    /* need to figure out input box so if city is entered wrong it will return a message */
+}
+
+.container{
+    background-color: hsl(0, 0%, 86%);
+    padding: 25px;
+}
+
+ .card-header-title{
+   font-size: 25px;
+   font-weight: bold;
+   text-decoration: underline;
+}
+
+.brewFinder{
+    background-color: hsl(48, 100%, 67%);
+    height: 50px;
+    padding: 10px;
+    padding-left: inherit;
+    font-weight: bold;
+}
+
+#bar-div{
+    /* need to figure out overflow options
+    maybe add number bullet points instead of just links */
 }
