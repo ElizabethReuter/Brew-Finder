@@ -13,6 +13,12 @@
 .card {
     display: inline-block;
     margin: 30px;
+    min-width: 500px;
+    min-height: 700px;
+}
+
+#bar-div {
+    font-size: small;
     min-width: 45%;
     min-height: 50%;
 }
