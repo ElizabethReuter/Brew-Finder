@@ -19,4 +19,6 @@
 
 #bar-div {
     font-size: small;
+    min-width: 45%;
+    min-height: 50%;
 }
