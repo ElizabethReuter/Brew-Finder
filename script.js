@@ -1,0 +1,1 @@
+var elem = new Foundation.ResponsiveMenu(element, options);
