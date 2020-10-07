@@ -16,3 +16,7 @@
     min-width: 500px;
     min-height: 700px;
 }
+
+#bar-div {
+    font-size: small;
+}

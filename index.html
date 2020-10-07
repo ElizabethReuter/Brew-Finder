@@ -5,35 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 1</title>
     <!-- Compressed CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link rel="stylesheet" href="style.css">
-    <!-- Compressed JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
-</head>
-<body>
-  html>
-  <head>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- maps -->
     <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
     <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
-    <script type="text/javascript">
-      window.onload = function() {
-        L.mapquest.key = 'lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24';
-        var map = L.mapquest.map('map', {
-          center: [41.8781, 87.6298],
-          layers: L.mapquest.tileLayer('map'),
-          zoom: 12
-        });
-        map.addControl(L.mapquest.control());
-      }
-    </script>
-  </head>
-  <body style="border: 0; margin: 0;">
-    <div id="map" style="width: 100%; height: 530px;"></div>
-  </body>
-</html>
- 
+</head>
+<header>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
@@ -94,9 +75,10 @@
       </div>
     </div>
   </nav>
+  <hr>
 
-<hr>
-
+</header>
+<body class="body">
 <div class="row h-100">
   <div class="column card col-md-6 col-lg-6 mb-4">
     <div class="card">
@@ -105,10 +87,15 @@
          Brewery finder
         </p>
       </header>
-      <div class="card-content">
+      <div class="card-content cityCard">
         <div class="content">
          <label>Input City</label>
-         <input type="text" placeholder="Enter City"/> 
+         <input type="text" placeholder="Enter City" id="userInput"> 
+         <button id="btn">Find!</button>
+         <hr>
+          <div id="bar-div">
+
+          </div>
           <br>
         </div>
       </div>
@@ -121,25 +108,29 @@
            MapQuest
           </p>
         </header>
-        <div class="card-content">
-          <div class="content">
-           <label>Map will go here</label>
-            <br>
+        <div class="card-content mapCard">
+          <div class="mapPlace">
           </div>
       </div>
     </div>
   </div>
 </div>
- 
+<!-- <div class="row">
+  <div class="listContainer">
+    <div class="col-md-12">
+      <div id="bar-div">
 
-      <footer>
-        <div class="footer-bottom">
-          footer
-        </div>
-      </footer>
-  
-  <script src="assets/js/vendor.js"></script>
-  <script src="assets/js/foundation.js"></script>
-  <script src="script.js"></script>
+      </div>
+    </div>
+  </div>
+</div> -->
+<footer>
+  <div class="footer-bottom">
+     footer
+  </div>
+</footer>
+<script>
+</script>
+<script src="script.js"></script>
 </body>
 </html>
