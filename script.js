@@ -5,7 +5,7 @@ $(document).ready(function () {
     $("#btn").on("click", function () {
         $('#bar-div').empty()
         $('#map').remove()
-        $('.mapPlace').append('<div id="map" style="width: 600px; height: 600px;"></div>')
+        $('.mapPlace').append('<div id="map" style="width: 372px; height: 372px;"></div>')
         var userInput = $("#userInput").val().trim();
         getBarInfo(userInput);
     });
