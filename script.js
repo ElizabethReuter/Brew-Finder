@@ -49,6 +49,12 @@ $(document).ready(function () {
 
     function displayMap() {
         L.mapquest.key = 'lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24';
+        if(typeof barArr[0] === 'undefined'){
+            errorMsg = $("<h4>").text("City Input is Invalid: Please Enter a Valid City Name (US Only)");
+            errorMsg.attr("style", "font-weight: bold; color: red;");
+            $("#bar-div").append(errorMsg);
+        }
+        else{
 
         map = L.mapquest.map('map', {
             center: [
@@ -69,6 +75,7 @@ $(document).ready(function () {
                     draggable: false
                 }).bindPopup(barArr[i].barName).addTo(map);
             }
+        }
         }
     };
 });
