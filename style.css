@@ -41,7 +41,14 @@
     font-weight: bold;
 }
 
-#bar-div{
-    /* need to figure out overflow options
-    maybe add number bullet points instead of just links */
+
+
+#bar-div {
+    font-size: small;
+    min-width: 45%;
+    min-height: 50%;
+}
+.newhtml{
+    margin-left: 5%; 
+    margin-right: 5%;
 }
