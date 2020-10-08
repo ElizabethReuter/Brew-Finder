@@ -25,7 +25,7 @@
 .container{
     background-color: hsl(0, 0%, 86%);
     padding: 25px;
-    background-image: url("./assets/BrewFinderLogo.png");
+    background-image: url("../Images/BrewFinderLogo.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 200px;
