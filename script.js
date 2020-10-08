@@ -37,10 +37,13 @@ $(document).ready(function () {
             // newDiv = $("<h4>").text(grabBarName);
             // $("#bar-div").append(newDiv);
             newLink = $("<a>").text(grabBarName);
-            newLink.attr("href", barArr[i].barURL);
+            var LinkFixer =barArr[i].barURL.substring(11);
+            console.log(LinkFixer);
+            newLink.attr("href", "https://"+LinkFixer);
             newLink.attr("alt", grabBarName);
 
             var newBreak = $("<br>");
+            newLink.attr("target", "_blank");
             
             $("#bar-div").append(newLink);
             $("#bar-div").append(newBreak);
@@ -49,6 +52,12 @@ $(document).ready(function () {
 
     function displayMap() {
         L.mapquest.key = 'lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24';
+        if(typeof barArr[0] === 'undefined'){
+            errorMsg = $("<h4>").text("City Input is Invalid: Please Enter a Valid City Name (US Only)");
+            errorMsg.attr("style", "font-weight: bold; color: red;");
+            $("#bar-div").append(errorMsg);
+        }
+        else{
 
         map = L.mapquest.map('map', {
             center: [
@@ -70,5 +79,19 @@ $(document).ready(function () {
                 }).bindPopup(barArr[i].barName).addTo(map);
             }
         }
+        }
     };
+          $("#btn").on("click", function () {
+           var LastSearch = $("#userInput").val().toUpperCase().trim();
+           localStorage.setItem("LastSearch", LastSearch);
+          });
+
+          function displayLastSearch(){
+              var displaySearch = localStorage.getItem("LastSearch");
+              $("#userInput").val(displaySearch);
+          }
+          displayLastSearch();
+
+
+
 });
