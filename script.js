@@ -37,10 +37,13 @@ $(document).ready(function () {
             // newDiv = $("<h4>").text(grabBarName);
             // $("#bar-div").append(newDiv);
             newLink = $("<a>").text(grabBarName);
-            newLink.attr("href", barArr[i].barURL);
+            var LinkFixer =barArr[i].barURL.substring(11);
+            console.log(LinkFixer);
+            newLink.attr("href", "https://"+LinkFixer);
             newLink.attr("alt", grabBarName);
 
             var newBreak = $("<br>");
+            newLink.attr("target", "_blank");
             
             $("#bar-div").append(newLink);
             $("#bar-div").append(newBreak);

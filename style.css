@@ -45,9 +45,15 @@
     font-weight: bold;
 }
 
+
+
+
+
 #bar-div{
-    /* need to figure out overflow options
-    maybe add number bullet points instead of just links */
+    height: 290px;
+    width: 370px;   
+    overflow: scroll;
+
 }
 
 #logo{
@@ -55,4 +61,5 @@
     width: 75px ;
     max-height: 100px;
 }
+
 
