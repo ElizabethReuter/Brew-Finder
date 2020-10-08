@@ -78,4 +78,17 @@ $(document).ready(function () {
         }
         }
     };
+          $("#btn").on("click", function () {
+           var LastSearch = $("#userInput").val().toUpperCase().trim();
+           localStorage.setItem("LastSearch", LastSearch);
+          });
+
+          function displayLastSearch(){
+              var displaySearch = localStorage.getItem("LastSearch");
+              $("#userInput").val(displaySearch);
+          }
+          displayLastSearch();
+
+
+
 });
