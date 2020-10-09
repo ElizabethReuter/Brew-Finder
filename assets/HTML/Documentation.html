@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About the makers of the Brewery Finder website</title>
 </head>
-<body>
+<body class="body">
   <header>
     <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
@@ -46,28 +46,45 @@
     <hr>
   
   </header>
-        
-
-    <p class="newhtml"> Owen Roth, Elizabeth Reuter, and Trey Jahner are three up and coming coders who are learning the basics.
-        They recently were assigned a project where They would have to make a functional website that has some practical
-        use!
-        They decided to make a brewery finder, baisicaly how it works is the user types in there city and the
-        application will output a map of the city and a list of all the names of the brewerys in the city.
-    </p><br>
-        <p class="newhtml">
-        Api's that we used were,
-        brewerydb
-        mapquest
-    </p><br>
-        <p class="newhtml">
-        Challenges Experienced, 
-        They faced most of our challenges while trying to get the map to display the location of the brewerys, the search bar and map would work perfectly the first time the user would imput there city the map would show the locations and the website would display the list of the brewerys. The second time the user would search a city it would not display anything.
-        Getting the Format to work for any type of device the user was on.
-    </p><br>
-        <p class="newhtml">
-        If we had more time we would add ratings for each brewery
-        A log in and sign out page where the users information gets saved they don't have to type in the city multiple times.
-    </p> <br>
-    
+    <div class="container">
+      <div class="columns">
+        <div class="column is-two-fifths">
+          <h1 class="newhtml h1">About the Creators</h1>
+              <p class="newhtml"> Owen Roth, Elizabeth Reuter, and Trey Jahner are three up and coming coders who are learning the basics.
+                They recently were assigned a project where they needed to make a functional website that has some practical use!
+                They decided to make a brewery finder, which the user inputs any US city and the application outputs a map of the city with a list of all the breweries in the area.
+              </p><br>
+          </div>
+        <div class="column is-one-fifth">
+            <!-- Blank -->
+        </div>
+        <div class="column is-two-fifths">
+            <p class="newhtml">
+              <h1 class="newhtml h1">Challenges Experienced</h1>
+              The challeneges that came up during this project dealt with the use of the map, search function and display of breweries. 
+              The map needed to be adjusted to fit in the container and continue to show each city. 
+              The search function had issues pulling information when doing a second search. 
+              The display of the breweries extended outside of the container if the list exceed more than 12 .
+            
+            </p><br>
+            <p class="newhtml">
+              Api's used - 
+              <ul class="newhtml">
+                    <li>BreweryDB</li> 
+                    <li>MapQuest</li> 
+              </ul>
+            </p> <br>
+        </div>
+    </div>
+  </div>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Brew Finder</strong> by <a href="https://jgthms.com">Project Group</a>. The source code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+          is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+        </p>
+      </div> 
+    </footer>
 </body>
 </html>
