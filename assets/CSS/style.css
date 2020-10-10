@@ -1,68 +1,77 @@
- .navbar {
-     margin-bottom: 30px;
-     background-color: gray;
-     /* need to fix buttons. remove buttons. add our own logo title */
- }
+.navbar {
+    margin-bottom: 30px;
+    background-color: gray;
+}
 
- .footer-bottom {
-    background-color: grey;
-    color: white;
-    bottom: 0;
-    padding: 10px;
-    /* need to add our own stuff to footer */
+.body {
+   background-color: #e3c056;
+   background-image: url("https://www.transparenttextures.com/patterns/circles.png");
+   min-height: 100%;
+   /* figure out height of screen? */
+}
+
+.footer {
+   background-color: rgb(85, 84, 84);
+   color: white;
+   bottom: 0;
+   padding: 10px;
+   margin-top: 50px;
+   /* need to add our own stuff to footer */
 }
 
 .card{
-    height: 470px;
-    width: 470px;
-    border-style: solid;
-    border-color: hsl(0, 0%, 4%);
-    border-width: 3px;
-    /* play around with color? */
-    /* need to figure out input box so if city is entered wrong it will return a message */
+   height: 470px;
+   width: 470px;
+   border-style: solid;
+   border-color: hsl(0, 0%, 4%);
+   border-width: 3px;
 }
 
 .container{
-    background-color: hsl(0, 0%, 86%);
-    padding: 25px;
-    background-image: url("../Images/BrewFinderLogo.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 200px;
+   background-color: hsl(0, 0%, 86%);
+   padding: 25px;
+   background-image: url("../Images/BrewFinderLogo.png");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 200px;
 }
 
- .card-header-title{
-   font-size: 25px;
-   font-weight: bold;
-   text-decoration: underline;
+.card-header-title{
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .brewFinder{
-    background-color: hsl(48, 100%, 67%);
-    height: 50px;
-    padding: 10px;
-    padding-left: inherit;
-    font-weight: bold;
+   background-color: hsla(48, 100%, 67%, 0.801);
+   height: 50px;
+   padding: 10px;
+   padding-left: inherit;
+   font-weight: bold;
 }
 
 .newhtml{
-    margin-left: 5%; 
-    margin-right: 5%;
+   margin-left: 5%; 
+   margin-right: 5%;
 
+}
+
+.h1 {
+   text-align: center;
+   font-weight: bolder;
+   padding: 20px;
 }
 
 
 #bar-div{
-    height: 290px;
-    width: 370px;   
-    overflow: scroll;
+   height: 290px;
+   width: 370px;   
+   overflow: scroll;
 
 }
 
 #logo{
-    height: 75px;
-    width: 75px ;
-    max-height: 100px;
+   height: 75px;
+   width: 75px ;
+   max-height: 100px;
 }
-
-

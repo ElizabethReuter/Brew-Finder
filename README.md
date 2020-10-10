@@ -2,19 +2,17 @@
 
 https://elizabethreuter.github.io/Project-1/
 	
-We decided to make a brewery finder, baisicaly how it works is the user types in there city and the
-  application will output a map of the city and a list of all the names of the brewerys in the city.  
+We ddecided to make a brewery finder, which the user inputs any US city and the application outputs a map of the city with a list of all the breweries in the area. 
  
-     Api's that we used were, 
- brewerydb
- mapquest.
+Api's used: 
+ BreweryDB
+ MapQuest
  
-    Challenges Experienced, 
-We faced most of our challenges while trying to get the map to display the location of the brewerys. 
-The search bar and map would work perfectly the first time; however
-The user would imput there city and the map would show the locations and the website would display the list of the brewerys. 
-The second time the user would search a city it would not display anything.
+Challenges Experienced:
+The challeneges that came up during this project dealt with the use of the map, search function and display of breweries. 
+The map needed to be adjusted to fit in the container and continue to show each city. 
+The search function had issues pulling information when doing a second search. 
+The display of the breweries extended outside of the container if the list exceed more than 12.
 
-			If we had more time,
-Give more information about each brewery. Examples include ratings, directions, menu, and photos.
+If we had more time more information about each brewery would be displayed. Some examples include ratings, directions, menu, and photos.
  
