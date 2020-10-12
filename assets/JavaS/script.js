@@ -1,7 +1,8 @@
 $(document).ready(function () {
+    // Creates an empty array for the list of bars
     var barArr = [];
-    var map
-
+    var map;
+// click function to grab user input then run the function needed to display correct info
     $("#btn").on("click", function () {
         $('#bar-div').empty()
         $('#map').remove()
@@ -9,7 +10,7 @@ $(document).ready(function () {
         var userInput = $("#userInput").val().trim();
         getBarInfo(userInput);
     });
-
+// grabs brewery info based on user input for city. grabs long and lat. after ajax, the map and bar list displays
     function getBarInfo(z) {
         barArr = [];
         var city = z;
@@ -22,6 +23,7 @@ $(document).ready(function () {
                     var barURL = response[i].website_url;
                     var barLong = response[i].longitude;
                     var barLat = response[i].latitude;
+                    // pushes grabbed bar info to array
                     barArr.push({barName, barLong, barLat, barURL});
                 }
 
@@ -30,7 +32,7 @@ $(document).ready(function () {
             displayBars();
         })
     }
-
+// displays the list of bars after ajax
     function displayBars() {
         for (var i = 0; i < barArr.length; i++) {
             var grabBarName = barArr[i].barName;
@@ -49,9 +51,10 @@ $(document).ready(function () {
             $("#bar-div").append(newBreak);
         }
     }
-
+// displays the map after ajax
     function displayMap() {
         L.mapquest.key = 'lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24';
+        // error message condition
         if(typeof barArr[0] === 'undefined'){
             errorMsg = $("<h4>").text("City Input is Invalid: Please Enter a Valid City Name (US Only)");
             errorMsg.attr("style", "font-weight: bold; color: red;");
@@ -67,7 +70,7 @@ $(document).ready(function () {
             layers: L.mapquest.tileLayer('map'),
             zoom: 8
         });
-
+        // loops through the bar list array to grab all indv. long and lats and adds to map.
         for (var i = 0; i < barArr.length; i++) {
             if (barArr[i].barLat != null && barArr[i].barLong != null) {
                 L.marker([
@@ -81,6 +84,7 @@ $(document).ready(function () {
         }
         }
     };
+    // adds last search to local storage and displays it
           $("#btn").on("click", function () {
            var LastSearch = $("#userInput").val().toUpperCase().trim();
            localStorage.setItem("LastSearch", LastSearch);
